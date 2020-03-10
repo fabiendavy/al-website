@@ -1,14 +1,13 @@
 <div class="articles">
-  <div class="article-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="article-trip-infos">
-    <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
+  <% @articles.each do |article| %>
+    <div class="article-card">
+      <img src="<%= article.image_url %>" /> 
+      <div class="article-card-infos">
+        <h2><%= article.title %></h2>
+        <p class="my-2"><%= article.content.body.to_plain_text.first(200) %>...</p>
+        <span><%= article.reading_time %> min</span> 
+      </div>
     </div>
-    <h2 class="article-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="article-trip-user avatar-bordered" />
-  </div>
-</div>
+  <% end %>
 
 </div>
