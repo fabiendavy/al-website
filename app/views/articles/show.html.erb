@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @article.image_url %>);"></div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+
+      <div class="article-infos">
+        <div class="card-initials"><%= @initials %></div>
+        <p class="description">
+          <%= @article.author.username %> • <%= @article.created_at.strftime("%B %d") %> • <%= @article.reading_time %> min de lecture
+        </p>
+      </div>
+
+      <div class="content">
+      <h1 class="title-article"><%= @article.title %></h1>
+
+      <%= @article.content %>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,31 @@
+h1.title-article {
+  margin-bottom: 32px;
+  font-family: 'Bellota', cursive;
+  text-transform: uppercase;
+  text-shadow: 2px 4px rgb(114, 114, 114);
+}
+
+.article-infos {
+  display: flex;
+  align-items: baseline;
+  margin: 32px;
+}
+
+.card-initials {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #5D4037;
+  margin: 10px 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 300px 0;
+}
