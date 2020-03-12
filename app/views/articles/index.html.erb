@@ -4,9 +4,11 @@
       <div class="article-card">
         <img src="<%= article.image_url %>" />
         <div class="article-card-infos">
-          <% username = article.author.username %>
-          <% words = username.split(/\W/) %>
-          <% initials = words.map { |word| word[0] } %>
+          <% 
+            username = article.author.username
+            words = username.split(/\W/)
+            initials = words.map { |word| word[0] } 
+          %>
           <div class="initials"><%= initials.join('') %></div>
           <div class="text">
             <p class="name"><%= article.author.username %></p>
