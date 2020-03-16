@@ -3,10 +3,12 @@
     <div class="col-10">
       <h1 class="text-center my-4">Add your article</h1>
 
-      <%= simple_form_for(@article) do |f| %>
+      <%= simple_form_for([@article, @tag]) do |f| %>
         <%= f.input :title, label: false, placeholder: "Give the article a title" %>
         <%= f.input :image_url, label: false, placeholder: "Url of the image that will appear on the banner and the card" %>
         <%= f.rich_text_area :content, placeholder: "Write your article", class: "article-action-text" %>
+        <%= f.tag_id :type, collection: Tag::TAGS, as: :select %>
+
         <div class="w-100 d-flex justify-content-center">
           <%= f.submit "Save the article", class: "article-btn" %>
         </div>
