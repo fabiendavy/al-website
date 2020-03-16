@@ -42,12 +42,11 @@ h1.title-article {
     margin: 0;
     padding: 10px 0;
     border-left: none;
-    color: #ccc;
+    opacity: 0.4;
     text-align: center;
     padding: 10px 0;
-    font-size: 2em;
-    font-style: italic;
-    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    font-family: 'Dancing Script', cursive;
   }
   .trix-content blockquote::before, .trix-editor blockquote::before {
     content: '"';

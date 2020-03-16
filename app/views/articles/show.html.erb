@@ -9,6 +9,7 @@
         <p class="description">
           <%= @article.author.username %> • <%= @article.created_at.strftime("%B %d") %> • <%= @article.reading_time %> min de lecture
         </p>
+        <span> • <%= link_to " ✎ Edit", edit_article_path %> </span>
       </div>
 
       <div class="content">
