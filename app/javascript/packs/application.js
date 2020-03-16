@@ -24,3 +24,8 @@ require("@rails/actiontext")
 // ----------------------------------------------------
 
 import "bootstrap";
+import { setLinksToTargetBlank } from "./link.js";
+
+document.addEventListener('turbolinks:load', () => {
+  setLinksToTargetBlank();
+});

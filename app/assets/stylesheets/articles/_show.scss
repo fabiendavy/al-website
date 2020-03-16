@@ -29,3 +29,30 @@ h1.title-article {
   background-position: center;
   padding: 300px 0;
 }
+
+.article-content {
+  margin-bottom: 50px;
+  .trix-content a, .trix-editor a {
+    text-decoration: underline;
+  }
+  .trix-content h1, .trix-editor h1 {
+    font-size: 2.1em;
+  }
+  .trix-content blockquote, .trix-editor blockquote {
+    margin: 0;
+    padding: 10px 0;
+    border-left: none;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2em;
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+  }
+  .trix-content blockquote::before, .trix-editor blockquote::before {
+    content: '"';
+  }
+  .trix-content blockquote::after, .trix-editor blockquote::after {
+    content: '"';
+  }
+}
