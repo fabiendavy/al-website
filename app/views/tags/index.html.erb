@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <% @tags.each do |tag| %>
+        <div class="tag-item"><%= tag.tag_type %></div>
+      <% end %>
+
+      <%= simple_form_for(@tag) do |f| %>
+        <div class="form-inline">
+          <%= f.input :tag_type, label: false, placeholder: "Add a new tag" %>
+          <%= f.button :button do %>
+            <i class="fas fa-plus-circle fa-2x d-flex justify-content-center align-items-center add-tag"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

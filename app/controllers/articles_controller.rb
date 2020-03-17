@@ -12,7 +12,6 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-    @tag = ArticleTag.new
   end
 
   def create
