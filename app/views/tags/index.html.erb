@@ -2,7 +2,12 @@
   <div class="row justify-content-center">
     <div class="col-sm-6">
       <% @tags.each do |tag| %>
-        <div class="tag-item"><%= tag.tag_type %></div>
+        <div class="tag-item">
+          <%= tag.tag_type %>
+          <%= link_to tag_path(tag), method: :delete, remote: true do %>
+            <i class="fas fa-times-circle"></i>
+          <% end %>
+        </div>
       <% end %>
 
       <%= simple_form_for(@tag) do |f| %>
