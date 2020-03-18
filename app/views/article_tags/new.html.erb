@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6">
+      <%= simple_form_for([@article, @article_tag]) do |f| %>
+        <p class="mb-3">Select your tags for this article</p>
+        <%= f.input_field :tag, as: :check_boxes, collection: @tags %>
+        <%= f.button :submit, "Save", class: "article-btn mt-4" %>
+      <% end %>
+    </div>
+  </div>
+</div>

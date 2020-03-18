@@ -19,7 +19,8 @@ class ArticlesController < ApplicationController
     @article.author = current_user
     @article.reading_time = ((@article.content.body.to_plain_text.split(' ').count) / 200.0).round
     if @article.save
-      redirect_to article_path(@article)
+      # redirect_to article_path(@article)
+      redirect_to new_article_article_tag_path(@article)
     else
       render :new
     end
