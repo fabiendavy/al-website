@@ -9,7 +9,16 @@
         <p class="description">
           <%= @article.author.username %> • <%= @article.created_at.strftime("%B %d") %> • <%= @article.reading_time %> min de lecture
         </p>
-        <span> • <%= link_to " ✎ Edit", edit_article_path %> </span>
+        <span class="mr-2"> • <%= link_to " ✎ Article", edit_article_path %> </span>
+        <span> • <%= link_to " ✎ Tags", new_article_article_tag_path(@article) %> </span>
+      </div>
+
+      <div class="article-tags">
+        <% @article.tags.uniq.each do |tag| %>
+          <div class="tag-item">
+            <%= tag.tag_type %>
+          </div>
+        <% end %>
       </div>
 
       <div class="content">

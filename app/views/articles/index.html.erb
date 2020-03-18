@@ -19,6 +19,13 @@
           <h2><%= article.title %></h2>
           <p class="my-2"><%= article.content.body.to_plain_text.first(200) %>...</p>
         </div>
+        <div class="article-card-tags">
+          <% article.tags.uniq.each do |tag| %>
+            <div class="tag-item">
+              <%= tag.tag_type %>
+            </div>
+          <% end %>
+        </div>
       </div>
     <% end %>
   <% end %>

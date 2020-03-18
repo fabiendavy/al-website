@@ -14,7 +14,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin: 24px 150px;
+  margin: 48px 150px;
 }
 
 // Smallest device
@@ -114,4 +114,9 @@ a {
 .article-card-infos .name, .article-card-infos .details {
   color: #333333;
   font-size: 12px;
+}
+
+.article-card-tags {
+  padding: 0 16px 16px 16px;
+  text-align: center;
 }
